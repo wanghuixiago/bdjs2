@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>        
+    <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+    <button id="trans-btn">转化为二进制</button>
+    <p id="result">运算结果</p>
+    <script>
+
+          document.getElementById("trans-btn").onclick = function() {
+		    var number=parseInt(document.getElementById("dec-number").value);
+			if(number<0){alert("必须输入正整数");}
+			else{
+			 var arr = new Array();
+             for (var i = 0; 1; i++) {
+               if(number==0){
+			      arr[i]=0;
+				  break;
+			   }
+			   else if (number / 2 >= 1) {
+                    arr[i] = number % 2;
+                    number = parseInt(number / 2);
+                } else{
+                    arr[i] = 1;
+                    break;
+                };
+            };		
+           document.getElementById("result").innerHTML = '运算结果' +(arr.reverse().join('')); 
+		   }   	
+}		
+
+
+// 实现党点击转化按钮时，将输入的十进制数字转化为二进制，并显示在result的p标签内
+// Some coding
+
+    </script>
+</body>
+</html>

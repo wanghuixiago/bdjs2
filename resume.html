@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简历</title>
+<style>
+a{
+text-decoration:none;
+}
+h1,h2,p{
+margin:0;
+}
+.title{
+font-size:18px;
+font-weight:bold;
+}
+.title1{
+font-size:18px;
+font-weight:bold;
+}
+p span.title{
+padding-right:10px;
+padding-left:20px;
+}
+p span.title1{
+padding-right:10px;
+}
+body{
+width:100%;
+}
+.theme{
+width:100%;
+background-color:#666666;
+height:80px;
+color:#FFFFFF;
+}
+.theme h1{
+float:left;
+line-height:80px;
+padding-left:20px;
+}
+.theme p{
+line-height:80px;
+float:right;
+padding-right:20px;
+}
+.content{
+width:100%;
+
+}
+
+.content_l{
+float:left;
+width:15%;
+background-color:#eaeaea;
+height:200px;
+line-height:200px;
+border-bottom:2px solid #fff;
+ display: table-cell;
+    text-align: center;
+}
+.content_r{
+float:right;
+padding-left:1%;
+width:83%;
+height:200px;
+border-right:2px solid #eaeaea;
+border-bottom:2px solid #eaeaea;
+}
+.wb{
+overflow:auto;
+}
+button{
+margin-top:10px;
+text-align:center;
+width:100px;
+height:50px;
+border-radius:10px;
+float:left;
+}
+#h,#t{
+ float:left;
+}
+</style>
+</head>
+
+<body>
+<div class="theme"><h1>简历</h1><p id="hello"></p></div>
+<div class="content">
+<div class="content_l"><h2>基本信息</h2></div>
+<div class="content_r"><p>  
+     <span class="title1">姓名</span> 张三     
+     <span class="title">性别</span> 男      
+	 <span class="title">应聘职位</span> 前端工程师 
+</p>
+</div>
+<div class="content_l"><h2>联系方式</h2></div>
+<div class="content_r">
+<p>  
+    <span class="title1">手机</span> 12312341234    
+	<span class="title">Email</span> <a href="#">joinefe@baidu.com</a>      
+	<span class="title">个人主页</span> <a href="#">github</a> 
+</p>
+</div>
+<div class="content_l"><h2>能力描述</h2></div>
+<div class="content_r">
+<p class="title">技术能力</p>
+<p>熟练掌握HTML,CSS,javascript</p>
+<p class="title">综合能力</p>
+<p>良好的沟通能力，主动积极，努力勤奋</p>
+</div>
+<div class="content_l"><h2>教育经历</h2></div>
+<div class="content_r">
+<p class="title">本科</p>
+<p>百度前端技术学院小薇学院</p>
+<p class="title">研究生</p>
+<p>百度前端技术学院大斌学院</p>
+</div>
+<div class="content_l"><h2>项目经历</h2></div>
+<div class="content_r">
+<p class="title">小度小度</p>
+<p>作为前端工程师角色参与了ABC组件的开发</p>
+<p class="title">研究生</p>
+<p>作为文档工程师参与了SAN doc文档编写</p>
+</div>
+
+<div class="content_l"><h2>自我评价</h2></div>
+<div class="content_r">
+<div class="wb">
+<button id="hobby" class="title">我的爱好</button>
+<p id="h"></p>
+</div>
+<div class="wb">
+<button id="tel" class="title">联系我</button>
+<p id="t"></p>
+</div>
+</div>
+</div>
+<script>
+     document.getElementById("hobby").onclick = function() {
+		     document.getElementById("h").innerHTML = '游泳，瑜伽，爬山，看电影' ;
+        } 
+	 document.getElementById("tel").onclick = function() {
+		     document.getElementById("t").innerHTML = '电话：18829347568；qq:123874939' ;
+        } 
+	var time=new Date().getHours();
+	 if (time<10)
+  {
+  x="Good morning";
+  }
+else if (time<19)
+  {
+  x="Good day";
+  }
+else
+  {
+  x="Good evening";
+  }
+document.getElementById("hello").innerHTML=x;
+</script>
+</body>
+</html>
