@@ -8,7 +8,7 @@
 <script>
      var arr = new Array();
 	 for (var i = 0; i<=100; i++) {
-	 if((i%3)==0){  
+	 if((i%3)==0 ||i.toString().indexOf(3) != -1){  
 	    arr[i]="PA";
 		continue;
 	    }else{
@@ -17,7 +17,7 @@
 		  
 	 };
 	 }
-      console.log(arr);
+      document.write(arr);
    </script>
 </body>
 </html>
